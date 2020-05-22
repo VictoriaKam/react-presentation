@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>React</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/solarized.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><!---------------------------------------------------- slide ----------------------------------------------->
+					<h1>React</h1>
+					<h4>A short presentation about the most popular JavaScipt Library.</h4>
+					<p><small>Created by <a href="https://github.com/VictoriaKam">Victoria Kamorina</a></small></p>
+					<img src="images/react.png" alt="React sign image" style="width: 50%;">
+				</section>
+				<section style="border: 4px solid #3dd9e7"><!---------------------------------------------------- slide ----------------------------------------------->
+					<h2>History Facts</h2>
+					<p>Created in <em><ins>2013</ins></em></p>
+					<p>By <em><ins>Jordan Walke</ins></em></p>
+					<p><em><ins>React Native</ins></em> for mobile apps</p>
+				</section>
+				<section><!---------------------------------------------------- slide ----------------------------------------------->
+					<h2>The Secret of Popularity</h2>
+					<ul style="line-height: 2">
+						<li>Better Performance</li>
+						<li>Helps to prevent <ins>updating of DOM</ins> → faster apps, better UX</li>
+						<li>More total <ins>rendered pages</ins> from the website server</li>
+					</ul>
+				</section>
+				<section><!---------------------------------------------------- slide ----------------------------------------------->
+					<h2>Argument against React</h2>
+					<p>Frameworks are bad for application's health → better to use <em>Web components</em> instead</p>
+					<img src="images/Web-components.png" alt="Constructor image" style="width: 70%;">
+				</section>
+				<section data-background="#3dd9e7"><!---------------------------------------------------- slide ----------------------------------------------->
+					<h2>React Basics</h2>
+					<ul style="line-height: 2">
+						<li>component-based architecture</li>
+						<li>cohesive, reusable and modular components</li>
+						<li>display data as it changes over time</li>
+					</ul>
+				</section>
+				<section><!---------------------------------------------------- slide ----------------------------------------------->
+					<section><!---------------------------------------------------- vertical slide ----------------------------------------------->
+						<h2>Tools</h2>
+						<h3>React Developer Tools</h3>
+						<img src="images/react developer tools.png" alt="React Developer Tools image" style="width: 70%;">
+					</section>
+					<section><!---------------------------------------------------- vertical slide ----------------------------------------------->
+						<h3>Create React App</h3>
+						<img src="images/create react app.png" alt="Create React App image" style="width: 50%;">
+					</section>
+					<section><!---------------------------------------------------- vertical slide ----------------------------------------------->
+						<h3>Create React App Installation</h3>
+						<ol style="line-height: 2">
+							<li>npm install -g create-react-app</li>
+							<li>go inside your project folder</li>
+							<li>create-react-app</li>
+							<li>name your project</li>
+							<li>npm start</li>
+						</ol>
+					</section>
+					<section style="line-height: 2"><!---------------------------------------------------- vertical slide ----------------------------------------------->
+						<h3>Dependencies</h3>
+						<ul>
+							<li>react</li>
+							<li>react-dom</li>
+							<li>react-scripts</li>
+						</ul>
+					</section>
+				</section>
+				<section><!---------------------------------------------------- slide ----------------------------------------------->
+					<section><!---------------------------------------------------- vertical slide ----------------------------------------------->
+						<h2>Component</h2>
+						<p>independent and reusable bit of code</p>
+						<p>Collection of components → User Interface</p>
+						<img src="images/react components.jpg" alt="React components image" style="width: 40%;">
+					</section>
+					<section><!---------------------------------------------------- vertical slide ----------------------------------------------->
+						<h2>Class Component</h2>
+						<ul>
+							<li>extends React.Component statement</li>
+							<li>render() method</li>
+							<li>must start with an upper case letter</li>
+						</ul>
+						<p>Code Example:</p>
+<pre>
+<code>
+	class MyComponent extends React.Component {
+		render() {
+			return (
+				&lt;elementOrComponent ../&gt;
+			);
+		}
+	}
+</code></pre>
+					</section>
+					<section><!---------------------------------------------------- vertical slide ----------------------------------------------->
+						<h2>Function Component</h2>
+						<p>Code Example:</p>
+<pre>
+<code>
+	const&nbsp;Hello&nbsp;=&nbsp;()&nbsp;=&gt;&nbsp;{
+		return&nbsp;(
+			&lt;div&nbsp;className&nbsp;=&nbsp;&quot;heading&quot;&gt;
+				&lt;h1&gt;Welcome&nbsp;to&nbsp;React!&lt;/h1&gt;
+			&lt;/div&gt;
+		)
+	};
+	ReactDom.render&nbsp;(
+		&lt;Hello&nbsp;/&gt;,
+		document.getElementById(&quot;root&quot;)
+	);
+</code></pre>
+					</section>
+				</section>
+				<section data-background="#3dd9e7"><!---------------------------------------------------- slide ----------------------------------------------->
+					<h2>JSX</h2>
+					<p>JavaScript as XML</p>
+					<p>Babel</p>
+				</section>
+				<section><!---------------------------------------------------- slide ----------------------------------------------->
+					<h2>Props</h2>
+					<p>Code Example:</p>
+					<pre>
+<code>
+	function&nbsp;Welcome(props)&nbsp;{
+		return&nbsp;&lt;h1&gt;Hello,&nbsp;{props.name}&lt;/h1&gt;;
+	&nbsp;&nbsp;}
+	&nbsp;&nbsp;
+	&nbsp;&nbsp;const&nbsp;element&nbsp;=&nbsp;&lt;Welcome&nbsp;name=&quot;Victoria&quot;&nbsp;/&gt;;
+	&nbsp;&nbsp;ReactDOM.render(
+		element,
+		document.getElementById(&apos;root&apos;)
+	&nbsp;&nbsp;);
+</code></pre>
+				</section>
+				<section><!---------------------------------------------------- slide ----------------------------------------------->
+					<h2>State</h2>
+					<ul>
+						<li><b>setState</b> to change state</li>
+						<li><b>arrow function</b> to bind</li>
+					</ul>
+					<p>Code Example:</p>
+					<pre>
+<code>
+const&nbsp;Lake&nbsp;=&nbsp;({name})&nbsp;=&gt;&nbsp;&lt;h1&gt;{name}&lt;/h1&gt;
+class&nbsp;App&nbsp;extends&nbsp;React.Component&nbsp;{
+	state&nbsp;=&nbsp;{
+		loggedIn:&nbsp;true
+	}
+	render()&nbsp;{
+		return&nbsp;(
+			&lt;div&gt;
+				The&nbsp;user&nbsp;is&nbsp;{this.state.loggedIn&nbsp;?
+				&nbsp;&apos;logged&nbsp;in&apos;&nbsp;:&nbsp;&apos;not&nbsp;logged&nbsp;in&apos;}
+			&lt;/div&gt;
+		)
+	}
+}
+</code></pre>
+				</section>
+				<section><!---------------------------------------------------- slide ----------------------------------------------->
+					<h2>Events</h2>
+					<ul>
+						<li><b>camelCase</b> syntax</li>
+						<li>inside <b>curly braces</b></li>
+					</ul>
+					<p>Code Example:</p>
+					<pre>
+<code>
+	function&nbsp;ActionLink()&nbsp;{
+		&nbsp;&nbsp;function&nbsp;handleClick(e)&nbsp;{
+		&nbsp;&nbsp;&nbsp;&nbsp;e.preventDefault();
+		&nbsp;&nbsp;&nbsp;&nbsp;console.log(&apos;The&nbsp;link&nbsp;was&nbsp;clicked.&apos;);
+		&nbsp;&nbsp;}
+		
+		&nbsp;&nbsp;return&nbsp;(
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;onClick={handleClick}&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click&nbsp;me
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;
+		&nbsp;&nbsp;);
+		}
+</code></pre>
+				</section>
+				<section data-background="images/react2.png"><!---------------------------------------------------- slide ----------------------------------------------->
+					<h2>Component Lifecycle</h2>
+					<ul style="line-height: 3">
+						<li><b>MOUNTING</b></li>
+						<li><b>UPDATING</b></li>
+						<li><b>UNMOUNTING</b></li>
+					</ul>
+				</section>
+				<section><!---------------------------------------------------- slide ----------------------------------------------->
+					<h2>Forms</h2>
+					<p>Code Example:</p>
+					<pre>
+<code>
+	class MyForm extends React.Component {
+		  render() {
+		    return (
+		      &lt;form&gt;
+		        &lt;h1&gt;Hello&lt;/h1&gt;
+		        &lt;p&gt;Enter your name:&lt;/p&gt;
+		        &lt;input
+		          type=&quot;text&quot; /&gt;
+		      &lt;/form&gt;
+		    );
+		  }
+		}
+	ReactDOM.render(&lt;MyForm /&gt;, document.getElementById(&apos;root&apos;));
+</code></pre>
+				</section>
+				<section><!---------------------------------------------------- slide ----------------------------------------------->
+					<h2>Production</h2>
+					<ol style="line-height: 3">
+						<li>npm run build</li>
+						<li>npm install serve -g</li>
+						<li>serve -s build</li>
+					</ol>
+				</section>
+				<section data-background="images/react3.png"><!---------------------------------------------------- slide ----------------------------------------------->
+					
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.netlify.app/initialization/
+			// - https://revealjs.netlify.app/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.netlify.app/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
